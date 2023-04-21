@@ -1,0 +1,21 @@
+h2 {
+  font-weight: 600;
+}
+
+ion-item {
+  flex: 1;
+  display: flex;
+}
+
+.item-button {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.token-indicator {
+  text-align: center;
+}

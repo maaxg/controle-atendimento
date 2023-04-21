@@ -1,0 +1,8 @@
+<ion-item *ngIf="token" [routerLink]="'/token/' + token.id" >
+  <div class="item-button">
+    <h2>
+      {{ token.value }}
+    </h2>
+    <h6 class="token-indicator">{{ tokenTypeToString(token.type) }}</h6>
+  </div>
+</ion-item>

@@ -7,12 +7,9 @@
     <div class="defaultElipse"></div>
     <h1 class="token">Solicite uma senha</h1>
   </div>
-  <ion-title>Senhas</ion-title>
+  <ion-title style="font-weight: bold">Senhas</ion-title>
 
   <ion-list>
-    <app-message
-      *ngFor="let message of getMessages()"
-      [message]="message"
-    ></app-message>
+    <app-tokens *ngFor="let token of getTokens()" [token]="token"></app-tokens>
   </ion-list>
 </ion-content>
