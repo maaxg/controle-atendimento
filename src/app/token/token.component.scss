@@ -1,10 +1,10 @@
 h2 {
   font-weight: 600;
+  color: #fff;
 }
 
-ion-item {
-  flex: 1;
-  display: flex;
+h6 {
+  color: #fff;
 }
 
 .item-button {
@@ -13,7 +13,22 @@ ion-item {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+}
+
+.sgBg {
+  background-color: #868686;
+}
+
+.seBg {
+  background-color: #d17373;
+}
+
+.spBg {
+  background-color: #8c67f4;
 }
 
 .token-indicator {

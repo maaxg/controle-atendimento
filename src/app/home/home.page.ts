@@ -14,6 +14,10 @@ import { TokenComponent } from '../token/token.component';
 })
 export class HomePage {
   private data = inject(DataService);
+  public tokens: Token[] = [];
+  private readonly userId = new Date().toTimeString();
+  public userToken: Token = {} as Token;
+  public nextToken: Token = {} as Token;
   constructor() {}
 
   refresh(ev: any) {
@@ -22,7 +26,19 @@ export class HomePage {
     }, 3000);
   }
 
+  ngOnInit(): void {
+    this.getTokens();
+  }
+
   getTokens(): Token[] {
-    return this.data.getTokens();
+    this.data
+      .getTokens()
+      .subscribe((tokens: Token[]) => (this.tokens = tokens));
+    this.nextToken = this.data.tokens[0];
+    return this.tokens;
+  }
+
+  getNewToken() {
+    this.userToken = this.data.generateNewToken(this.userId);
   }
 }
